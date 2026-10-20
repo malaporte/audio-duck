@@ -3,7 +3,7 @@ import Foundation
 import ServiceManagement
 import os
 
-private let log = Logger(subsystem: "local.audio-device-priorities", category: "app")
+private let log = Logger(subsystem: "local.audio-duck", category: "app")
 
 /// One entry of a priority list, paired with the connected device it matches, if any.
 struct PriorityRow: Identifiable {

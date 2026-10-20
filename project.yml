@@ -1,5 +1,5 @@
-# Generates AudioPriorities.xcodeproj. Run `make project` (or `xcodegen generate`) after adding or removing files.
-name: AudioPriorities
+# Generates AudioDuck.xcodeproj. Run `make project` (or `xcodegen generate`) after adding or removing files.
+name: AudioDuck
 options:
   deploymentTarget:
     macOS: "14.0"
@@ -9,16 +9,17 @@ settings:
     MARKETING_VERSION: "1.0"
     CURRENT_PROJECT_VERSION: "1"
 targets:
-  AudioPriorities:
+  AudioDuck:
     type: application
     platform: macOS
-    sources: [Sources/AudioPriorities]
+    sources: [Sources/AudioDuck]
     settings:
       base:
-        PRODUCT_NAME: AudioPriorities
-        PRODUCT_BUNDLE_IDENTIFIER: local.audio-device-priorities
+        PRODUCT_NAME: AudioDuck
+        PRODUCT_BUNDLE_IDENTIFIER: local.audio-duck
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: Audio Priorities
+        INFOPLIST_KEY_CFBundleDisplayName: Audio Duck
         INFOPLIST_KEY_LSUIElement: YES
         # Ad-hoc signing for local use. Set DEVELOPMENT_TEAM and switch to Automatic to distribute.
         CODE_SIGN_STYLE: Manual

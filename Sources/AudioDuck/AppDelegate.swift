@@ -10,7 +10,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        statusItem.button?.image = NSImage(systemSymbolName: "hifispeaker.and.homepod", accessibilityDescription: "Audio Priorities")
+        statusItem.button?.image = DuckShape.menuBarImage()
         let menu = NSMenu()
         menu.delegate = self
         statusItem.menu = menu
@@ -41,7 +41,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private func showSettings() {
         if settingsWindow == nil {
             let window = NSWindow(contentViewController: NSHostingController(rootView: SettingsView(store: store)))
-            window.title = "Audio Priorities"
+            window.title = "Audio Duck"
             window.styleMask = [.titled, .closable, .miniaturizable, .resizable]
             window.isReleasedWhenClosed = false
             window.setContentSize(NSSize(width: 460, height: 540))
