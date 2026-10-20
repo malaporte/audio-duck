@@ -1,0 +1,26 @@
+# Generates AudioPriorities.xcodeproj. Run `make project` (or `xcodegen generate`) after adding or removing files.
+name: AudioPriorities
+options:
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  AudioPriorities:
+    type: application
+    platform: macOS
+    sources: [Sources/AudioPriorities]
+    settings:
+      base:
+        PRODUCT_NAME: AudioPriorities
+        PRODUCT_BUNDLE_IDENTIFIER: local.audio-device-priorities
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Audio Priorities
+        INFOPLIST_KEY_LSUIElement: YES
+        # Ad-hoc signing for local use. Set DEVELOPMENT_TEAM and switch to Automatic to distribute.
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+        ENABLE_HARDENED_RUNTIME: YES
